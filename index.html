@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="한국투자증권 PF1본부 부동산금융1부 최이름 차장 — 부동산 개발사업 PF · 정비사업 · 담보대출 · 유동화 금융 주관 및 대주 참여 주요 수행 실적">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://name-records.pages.dev/">
+<meta property="og:title" content="최이름 차장 · 부동산금융 주요 수행 실적">
+<meta property="og:description" content="개발사업 PF · 정비사업 · 담보대출 · 유동화 — 한국투자증권 부동산금융1부">
+<meta property="og:image" content="https://name-records.pages.dev/img/card.jpg">
+<title>최이름 Track Records</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 단일 컬럼 — 프로필(명함 + 소개) → 요약 3칸 패널 → 금융 구조별 타일 → 필터 바 + 수행 딜 목록(펼치면 일정·규모)
+   토큰은 '유동화시장 등급 · 금리 현황'(daily-ratings) · '시공사 시공능력평가 · 신용등급 현황'(cons-ratings) 대시보드와 동일 */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --line:#dfe2e8; --fg:#1b2230; --muted:#5d6678;
+  --accent:#2747a8; --accent-soft:#e8edf9;
+  --ok:#1f7a4d; --warn:#a26a00; --pf:#7a3fa8; --pf-bg:#f3ebfa;
+  --seg1:#2747a8; --seg2:#5f78c4; --seg3:#9aabdc; --seg4:#cdd6ee;
+  --shade:rgba(27,34,48,.06);
+  --f-sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11151d; --surface:#181e29; --line:#2a3242; --fg:#e6e9ef; --muted:#97a0b2;
+  --accent:#8ea8ff; --accent-soft:#1f2a45;
+  --ok:#5fd19a; --warn:#f0bb4a; --pf:#d2a6ff; --pf-bg:#2c2140;
+  --seg1:#8ea8ff; --seg2:#6680cc; --seg3:#46599a; --seg4:#2e3a5e;
+  --shade:rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11151d; --surface:#181e29; --line:#2a3242; --fg:#e6e9ef; --muted:#97a0b2;
+  --accent:#8ea8ff; --accent-soft:#1f2a45;
+  --ok:#5fd19a; --warn:#f0bb4a; --pf:#d2a6ff; --pf-bg:#2c2140;
+  --seg1:#8ea8ff; --seg2:#6680cc; --seg3:#46599a; --seg4:#2e3a5e;
+  --shade:rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-sans);font-size:14px;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:16px;padding-block:24px 40px;display:flex;flex-direction:column;gap:24px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 16px}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;color:var(--muted);margin:0 0 2px}
+h1{font-size:1.45rem;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);font-size:.85rem;margin:2px 0 0}
+.hright{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.sisters{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.updated{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);text-align:right}
+.sister{font-size:.76rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:3px 9px}
+.sister:hover{background:var(--accent-soft)}
+.sister .sl{color:var(--muted);font-weight:500}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.sec-head .note{font-size:.78rem;color:var(--muted)}
+
+/* 프로필 */
+.profile{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:28px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.bcard{margin:0;display:flex;flex-direction:column;gap:8px}
+.bcard img{display:block;width:100%;height:auto;aspect-ratio:1200/672;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 6px 18px var(--shade);background:#fff}
+.bcard figcaption{font-size:.72rem;color:var(--muted)}
+.intro{display:flex;flex-direction:column;gap:12px;min-width:0}
+.who{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.who b{font-size:1.3rem;font-weight:700;letter-spacing:-.01em}
+.who span{color:var(--muted);font-size:.86rem}
+.intro p{margin:0;max-width:66ch;font-size:.92rem;line-height:1.75}
+.roles{display:flex;flex-wrap:wrap;gap:6px}
+.role{font-size:.76rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.role.alt{background:transparent;border:1px solid var(--line);color:var(--muted);font-weight:500}
+.contact{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:4px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;align-items:center;max-width:520px}
+.contact dt{color:var(--muted);font-size:.76rem}
+.contact dd{margin:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.contact .v{font-family:var(--f-mono);font-size:.84rem;user-select:all;word-break:break-all}
+.copy{all:unset;cursor:pointer;font-size:.7rem;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:5px;padding:1px 7px;line-height:1.6}
+.copy:hover{background:var(--accent-soft)}
+.hint{font-size:.8rem;color:var(--muted);margin:0}
+
+/* 요약 패널 */
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.kpi{padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.kpi + .kpi{border-left:1px solid var(--line)}
+.kpi .name{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.kpi .name b{font-weight:600;font-size:.95rem}
+.kpi .name span{font-size:.72rem;color:var(--muted)}
+.big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.big .num{font-family:var(--f-mono);font-size:1.9rem;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.1}
+.big .num small{font-size:.9rem;color:var(--muted);margin-left:2px}
+.big .cap{font-size:.8rem;color:var(--muted)}
+.yrs svg{display:block;width:100%;height:auto}
+.yrs text{font-family:var(--f-mono);font-size:10px;fill:var(--muted)}
+.yrs .v{fill:var(--fg);font-weight:500}
+.yrs .grid{stroke:var(--line);stroke-width:1}
+.region{font-size:.76rem;color:var(--muted)}
+.bars{display:grid;grid-template-columns:auto 1fr auto;column-gap:10px;row-gap:6px;font-size:.8rem;align-items:center}
+.bars .lb{white-space:nowrap}
+.bars .tr{height:8px;border-radius:4px;background:var(--accent-soft);overflow:hidden}
+.bars .tr i{display:block;height:100%;background:var(--seg1);border-radius:4px}
+.bars .n{font-family:var(--f-mono);font-size:.78rem;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+.bars .n b{color:var(--fg);font-weight:500}
+.kfoot{font-size:.74rem;color:var(--muted)}
+.kfoot a{color:var(--accent);text-decoration:none}
+.kfoot a:hover{text-decoration:underline}
+
+/* 금융 구조 타일 */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color .15s,background .15s}
+.tile:hover{border-color:var(--seg3)}
+.tile[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.tile .th{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tile .th b{font-size:.95rem;font-weight:600}
+.tile .th span{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
+.tile .th span em{font-style:normal;color:var(--accent);font-weight:500;font-size:.95rem}
+.tile p{margin:0;font-size:.8rem;color:var(--muted);line-height:1.6}
+.tile ul{list-style:none;margin:0;padding:8px 0 0;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:3px}
+.tile li{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;min-width:0}
+.tile li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.tile li i{font-style:normal;font-family:var(--f-mono);font-size:.76rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 필터 */
+.filters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);flex-wrap:wrap}
+.seg button{all:unset;cursor:pointer;padding:6px 10px;font-size:.84rem;color:var(--muted)}
+.seg button + button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+label.f{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted)}
+select,input[type=search]{font:inherit;font-size:.85rem;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+input[type=search]{width:200px}
+.tail{margin-left:auto;display:flex;align-items:center;gap:10px}
+.count{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.count b{font-family:var(--f-mono);color:var(--fg);font-weight:500}
+
+/* 딜 목록 */
+.list{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.cols,.deal > summary{display:grid;grid-template-columns:34px 112px minmax(0,2.1fr) minmax(0,2.3fr) minmax(0,1fr) minmax(0,1.15fr) 14px;gap:14px;align-items:center;padding:10px 16px}
+.cols{font-size:.74rem;font-weight:600;color:var(--muted);border-bottom:1px solid var(--line);padding-block:8px}
+.cols button{all:unset;cursor:pointer}
+.cols button:hover{color:var(--fg)}
+.cols [aria-sort="ascending"] button::after{content:" ↑"}
+.cols [aria-sort="descending"] button::after{content:" ↓"}
+.cols .r{text-align:right}
+.deal + .deal{border-top:1px solid var(--line)}
+.deal > summary{cursor:pointer;list-style:none}
+.deal > summary::-webkit-details-marker{display:none}
+.deal > summary:hover{background:var(--bg)}
+.deal[open] > summary{background:var(--accent-soft)}
+.no{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.thumb{width:112px;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:5px;background:var(--line);display:block}
+.nm{min-width:0}
+.nm b{display:block;font-weight:600;font-size:.9rem;line-height:1.4;word-break:keep-all}
+.nm small{display:flex;flex-wrap:wrap;gap:2px 8px;color:var(--muted);font-size:.74rem;margin-top:2px}
+.at{font-size:.68rem;font-weight:600;padding:0 6px;border-radius:4px;border:1px solid var(--line);color:var(--muted);line-height:1.6}
+.fins{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
+.fin{font-size:.76rem;padding:2px 7px;border-radius:5px;background:var(--bg);border:1px solid var(--line);white-space:nowrap}
+.fin i{font-style:normal;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-right:4px}
+.fin b{font-family:var(--f-mono);font-weight:500;font-size:.76rem}
+.deal[open] .fin{background:var(--surface)}
+.sc{text-align:right;min-width:0}
+.sc b{display:block;font-family:var(--f-mono);font-weight:500;font-size:.88rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sc small{color:var(--muted);font-size:.7rem}
+.bd{font-size:.8rem;min-width:0;word-break:keep-all}
+.bd small{display:block;color:var(--muted);font-size:.7rem}
+.chev{width:14px;height:14px;color:var(--muted);transition:transform .15s}
+.deal[open] .chev{transform:rotate(90deg)}
+
+.detail{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr) minmax(0,1fr);gap:22px;padding:6px 16px 20px 64px;background:var(--accent-soft)}
+.detail img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:6px;display:block;background:var(--line)}
+.detail h3{font-size:.72rem;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;background:var(--seg3)}
+.tl li{position:relative;padding-left:20px;display:flex;gap:10px;font-size:.82rem;line-height:1.5;padding-block:3px}
+.tl li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:1.5px solid var(--seg2)}
+.tl li.f::before{background:var(--accent);border-color:var(--accent)}
+.tl li.f span{font-weight:600}
+.tl li.p{color:var(--muted)}
+.tl li.p::before{border-style:dashed;border-color:var(--muted)}
+.tl time{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);min-width:3.6em;font-variant-numeric:tabular-nums}
+.tl .tag{font-size:.66rem;border:1px solid currentColor;border-radius:4px;padding:0 4px;margin-left:4px}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;margin:0;font-size:.82rem}
+.spec dt{color:var(--muted);font-size:.76rem;white-space:nowrap}
+.spec dd{margin:0;word-break:keep-all;min-width:0}
+.spec .m{font-family:var(--f-mono);font-size:.8rem}
+.empty{padding:28px 16px;text-align:center;color:var(--muted);font-size:.86rem}
+
+.info{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:.84rem}
+.info summary{cursor:pointer;font-weight:600}
+.info ul{margin:8px 0 0;padding-left:18px;color:var(--muted);max-width:86ch;display:flex;flex-direction:column;gap:2px}
+footer{font-size:.76rem;color:var(--muted);line-height:1.65}
+footer p{margin:0 0 6px}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:1080px){
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .detail{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-left:16px}
+  .detail .dimg{grid-column:1/-1;max-width:420px}
+}
+@media (max-width:900px){
+  .profile{grid-template-columns:1fr;gap:18px;padding:16px}
+  .bcard{max-width:440px}
+  .kpis{grid-template-columns:1fr}
+  .kpi + .kpi{border-left:0;border-top:1px solid var(--line)}
+  .hright{align-items:flex-start}
+  .sisters{justify-content:flex-start}
+  .updated{text-align:left}
+  .cols{display:none}
+  .deal > summary{grid-template-columns:96px minmax(0,1fr) 14px;grid-template-areas:"img nm ch" "img fin ch" "img meta ch";gap:6px 12px;align-items:start;padding:12px}
+  .deal > summary .no{display:none}
+  .deal > summary .thumb{grid-area:img;width:96px}
+  .deal > summary .nm{grid-area:nm}
+  .deal > summary .fins{grid-area:fin}
+  .deal > summary .sc{grid-area:meta;text-align:left;display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
+  .deal > summary .sc b{display:inline}
+  .deal > summary .bd{display:none}
+  .deal > summary .chev{grid-area:ch;align-self:center}
+}
+@media (max-width:640px){
+  .tiles{grid-template-columns:1fr}
+  .detail{grid-template-columns:1fr;padding:6px 12px 16px}
+  .tail{margin-left:0;width:100%;justify-content:space-between}
+  label.f.search{flex:1 1 100%}
+  input[type=search]{width:100%}
+  .contact{grid-template-columns:1fr;gap:2px}
+  .contact dd{margin-bottom:6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="eyebrow">PERSONAL TRACK RECORDS</p>
+      <h1>최이름 차장 · 부동산금융 주요 수행 실적</h1>
+      <p class="sub">한국투자증권 PF1본부 부동산금융1부 · 개발사업 PF · 담보대출 · 유동화 금융 주관 및 대주 참여</p>
+    </div>
+    <div class="hright">
+      <div class="sisters">
+        <a class="sister" href="https://daily-ratings.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> 유동화시장 등급 · 금리 현황 →</a>
+        <a class="sister" href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> 시공사 시공능력평가 · 신용등급 →</a>
+      </div>
+      <div class="updated">2026.10 기준 · 수행 딜 <span class="n-deal">40</span>건</div>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-prof">
+    <div class="sec-head"><h2 id="h-prof">프로필</h2></div>
+    <div class="profile">
+      <figure class="bcard">
+        <img src="img/card.jpg" width="1200" height="672" alt="최이름 명함 — 한국투자증권 PF1본부 부동산금융1부 CAIA 차장, 02 3276 6012 / 010 2874 4084, name@koreainvestment.com, (07321) 서울특별시 영등포구 의사당대로 88">
+        <figcaption>명함의 QR코드로 연락처를 바로 저장할 수 있습니다.</figcaption>
+      </figure>
+      <div class="intro">
+        <div class="who"><b>최이름</b><span>한국투자증권 PF1본부 부동산금융1부 차장 · CAIA</span></div>
+        <div class="roles">
+          <span class="role">금융 주관</span><span class="role">대주 참여</span><span class="role">Equity 공동투자</span>
+          <span class="role alt">개발사업 PF</span><span class="role alt">정비사업</span><span class="role alt">담보대출</span><span class="role alt">유동화 · 리파이낸싱</span>
+        </div>
+        <p>부동산 개발사업의 토지 확보부터 착공, 분양, 준공 이후까지 단계마다 필요한 금융을 구조화하고, 주관사 또는 대주로 참여해 왔습니다. 공동주택 · 주상복합 · 오피스 · 지식산업센터 개발 PF와 재개발 사업비, 미분양 · 실물 · 토지 담보대출, 시행이익 유동화와 리파이낸싱까지 2018년 이후 <span class="n-deal">40</span>개 사업의 금융을 수행했습니다.</p>
+        <p>시행사 · 시공사 · 신탁사와 사업 초기부터 구조를 함께 짜는 일이 많습니다. 사업 개요서나 초기 단계의 자료로도 조달 구조와 일정을 검토할 수 있습니다.</p>
+        <dl class="contact">
+          <dt>이메일</dt><dd><span class="v" id="c-mail">name@koreainvestment.com</span><button type="button" class="copy" data-copy="c-mail">복사</button></dd>
+          <dt>전화</dt><dd><span class="v" id="c-tel">02-3276-6012</span><button type="button" class="copy" data-copy="c-tel">복사</button></dd>
+          <dt>주소</dt><dd><span>(07321) 서울특별시 영등포구 의사당대로 88</span></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-sum">
+    <div class="sec-head">
+      <h2 id="h-sum">요약</h2>
+      <span class="note">2018–2026 수행 딜 기준 · 금액 단위 억원</span>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section aria-labelledby="h-str">
+    <div class="sec-head">
+      <h2 id="h-str">금융 구조별 수행 경험</h2>
+      <span class="note">타일을 누르면 아래 목록이 해당 구조로 좁혀집니다</span>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section aria-labelledby="h-list" id="track">
+    <div class="sec-head">
+      <h2 id="h-list">수행 딜 목록</h2>
+      <span class="note">행을 누르면 사업 · 금융 일정과 사업 규모가 펼쳐집니다</span>
+    </div>
+    <div class="filters">
+      <div class="seg" role="group" aria-label="금융 구조" id="seg-type"></div>
+      <div class="seg" role="group" aria-label="수행 시기" id="seg-per">
+        <button type="button" data-v="all" aria-pressed="true">전체 기간</button>
+        <button type="button" data-v="new" aria-pressed="false">'23–'26</button>
+        <button type="button" data-v="old" aria-pressed="false">'16–'22</button>
+      </div>
+      <label class="f" for="f-asset">자산
+        <select id="f-asset"><option value="all">전체</option></select>
+      </label>
+      <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="사업명 · 지역 · 시공사 검색"></label>
+      <div class="tail"><span class="count" id="count"></span></div>
+    </div>
+    <div class="list" role="table" aria-label="수행 딜 목록">
+      <div class="cols" role="row" id="cols">
+        <span class="r" role="columnheader" data-k="no" aria-sort="none"><button type="button">No</button></span>
+        <span role="columnheader">조감도</span>
+        <span role="columnheader">사업</span>
+        <span role="columnheader" data-k="last" aria-sort="descending"><button type="button">금융</button></span>
+        <span class="r" role="columnheader" data-k="scale" aria-sort="none"><button type="button">사업 규모</button></span>
+        <span role="columnheader">시공사 · 차주</span>
+        <span></span>
+      </div>
+      <div id="rows"></div>
+    </div>
+  </section>
+
+  <details class="info">
+    <summary>표기 기준</summary>
+    <ul>
+      <li>금액 단위는 억원입니다. 금융 칩에는 해당 딜에서 실행된 주요 금융(본PF · 브릿지론 · 담보대출 · 유동화 · 리파이낸싱 · Equity 공동투자)을 표시했습니다.</li>
+      <li>사업 규모는 분양매출 기준이며, 담보대출은 감정평가액(또는 담보가치), 오피스는 준공후가치로 표시했습니다.</li>
+      <li>일정은 사업 · 금융 주요 마일스톤이며, 점선으로 표시한 '예정' 항목은 계획 일정입니다.</li>
+      <li>시공사 · 시행사 명칭은 딜 수행 당시 기준입니다.</li>
+    </ul>
+  </details>
+
+  <footer>
+    <p>함께 운영하는 대시보드: <a href="https://daily-ratings.pages.dev/" target="_blank" rel="noopener">유동화시장 등급 · 금리 현황</a> · <a href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황</a></p>
+    <p>한국투자증권 PF1본부 부동산금융1부 최이름 차장 · name@koreainvestment.com · 02-3276-6012</p>
+  </footer>
+</div>
+
+<script>
+/* 일정: [연월, 내용, 구분] — f: 금융 실행, p: 예정, 빈칸: 사업 일정 */
+const DEALS=[
+{no:1,nm:"고양 삼송 단지형 단독주택 개발사업",loc:"경기 고양시 덕양구 오금동",at:"단독·연립",tags:["early","pf","abs"],
+ ev:[["19.09","Equity 공동투자","f"],["20.10","사업계획승인 완료"],["20.10","본PF 1,400억","f"],["21.04","착공 및 분양"],["21.07","시행이익 유동화 400억","f"]],
+ sl:"분양매출",sv:4240,gfa:"17,723평",spec:"지상2~3층, 단독주택 452세대 (3개 단지, 82개동)",bd:"현대건설㈜",dev:"㈜알비디케이홈즈"},
+{no:2,nm:"대구 태평로2가 주상복합 개발사업",loc:"대구 중구 태평로2가",at:"주상복합",tags:["early","pf"],
+ ev:[["18.04","Equity 공동투자","f"],["19.06","본PF 1,600억","f"],["19.09","사업계획승인 완료"],["19.12","착공 및 분양"]],
+ sl:"분양매출",sv:5315,gfa:"48,547평",spec:"지하4~지상49층, 공동주택 803세대 · 오피스텔 150실",bd:"현대건설㈜",dev:"포스시티㈜"},
+{no:3,nm:"의정부 금오동 공동주택 개발사업",loc:"경기 의정부시 금오동",at:"공동주택",tags:["early"],
+ ev:[["19.08","Equity 공동투자","f"],["19.12","지구단위계획 결정 고시"],["20.10","브릿지론 770억","f"],["22.11","사업계획승인 완료"]],
+ sl:"분양매출",sv:4951,gfa:"39,284평",spec:"지하5~지상42층, 공동주택 656세대",bd:"㈜대우건설",dev:"㈜지오반"},
+{no:4,nm:"서울 삼성동 오피스텔 개발사업",loc:"서울 강남구 삼성동",at:"오피스텔",tags:["pf"],
+ ev:[["21.06","건축심의 완료"],["21.11","본PF 1,200억","f"],["21.12","건축허가 완료"],["22.06","착공 및 분양"]],
+ sl:"분양매출",sv:3973,gfa:"9,460평",spec:"지하7~지상17층, 오피스텔 165실 및 근린생활시설",bd:"현대건설㈜",dev:"(유)디에이치개발"},
+{no:5,nm:"양주 옥정 단지형 연립주택 개발사업",loc:"경기 양주시 옥정동",at:"단독·연립",tags:["early","pf"],
+ ev:[["20.05","Equity 공동투자","f"],["21.09","사업계획승인 완료"],["21.11","본PF 500억","f"],["21.12","착공 및 분양"]],
+ sl:"분양매출",sv:3848,gfa:"24,642평",spec:"지하1~지상4층, 연립주택 456세대 (3개 단지, 34개동)",bd:"㈜KCC건설",dev:"㈜알비디케이"},
+{no:6,nm:"용인 보평2지구 공동주택 개발사업",loc:"경기 용인시 처인구 고림동",at:"공동주택",tags:["early","pf"],
+ ev:[["19.05","Equity 공동투자","f"],["19.10","건축심의 완료"],["20.07","사업계획승인 완료"],["20.09","본PF 1,200억","f"],["21.02","착공 및 분양"]],
+ sl:"분양매출",sv:6290,gfa:"77,740평",spec:"지하2~지상29층, 공동주택 1,721세대",bd:"현대건설㈜",dev:"㈜지알디"},
+{no:7,nm:"인천 송도 PKG5 토지 담보대출",loc:"인천 송도국제도시 국제업무단지",at:"토지·실물",tags:["loan"],
+ ev:[["16.08","담보 감정평가"],["17.02","담보대출 약정 체결"],["17.02","담보대출 4,700억","f"],["19.11","리파이낸싱 5,530억","f"]],
+ sl:"감정평가액",sv:6460,gfa:"토지 41,889평",spec:"송도국제도시 NSIC Package#5 (B3 · E5 · G5 블록) 부지",bd:"차주 NSIC",bdn:"Gale 70.1% · 포스코건설 29.9%",dev:"NSIC"},
+{no:9,nm:"동탄2신도시 오피스텔 개발사업",loc:"경기 화성시 동탄2택지지구",at:"오피스텔",tags:["pf"],
+ ev:[["17.05","LH 토지매매 계약"],["17.07","권리의무승계 계약"],["17.10","건축허가 완료"],["18.03","본PF 290억","f"],["18.04","착공"]],
+ sl:"분양매출",sv:561,gfa:"3,811평",spec:"지하5~지상11층, 오피스텔 176실 및 근린생활시설",bd:"태경종합건설㈜",dev:"㈜어반"},
+{no:10,nm:"인천 논현동 주상복합 개발사업",loc:"인천 남동구 논현동",at:"주상복합",tags:["pf"],
+ ev:[["14.03","토지매매 계약"],["16.07","건축허가 완료"],["20.02","본PF 1,430억","f"],["20.06","착공 및 분양"]],
+ sl:"분양매출",sv:1900,gfa:"19,675평",spec:"지하4~지상41층, 공동주택 294세대 · 오피스텔 380실",bd:"대우산업개발㈜",dev:"㈜엠제이산업개발"},
+{no:11,nm:"안성 동항지구 도시개발사업",loc:"경기 안성시 양성면 동항리",at:"공동주택",tags:["early"],
+ ev:[["21.07","사업권 양수도"],["22.01","구역지정 자문심의"],["22.02","지정 제안 수용 통보"],["22.03","Equity 공동투자","f"],["22.08","입안 보완 실과협의"]],
+ sl:"분양매출",sv:1639,gfa:"20,965평",spec:"지하2~지상25층, 공동주택 496세대 및 근린생활시설",bd:"시공사 미정",dev:"㈜정현도시개발"},
+{no:12,nm:"시화 MTV 반달섬 생활숙박시설 개발사업",loc:"경기 안산시 시화 MTV",at:"상업·복합",tags:["pf"],
+ ev:[["20.03","토지매매 계약"],["20.07","건축심의 완료"],["20.08","건축허가 완료"],["21.01","본PF 960억","f"],["21.04","착공 및 분양"]],
+ sl:"분양매출",sv:1646,gfa:"12,570평",spec:"지하2~지상23층, 생활숙박시설 982호실 및 근린생활시설",bd:"㈜디에이건설",dev:"㈜제이앤아이홀딩스"},
+{no:13,nm:"서울 송파 방이동 오피스텔 개발사업",loc:"서울 송파구 방이동",at:"오피스텔",tags:["pf"],
+ ev:[["17.12","토지매매 계약"],["18.05","건축허가 완료"],["18.07","본PF 420억","f"],["18.08","착공 및 분양"]],
+ sl:"분양매출",sv:596,gfa:"2,739평",spec:"지하2~지상16층, 오피스텔 182실 및 근린생활시설",bd:"건국건설㈜",dev:"케이시와이산업개발㈜"},
+{no:14,nm:"서울 마포 성산동 오피스텔 개발사업",loc:"서울 마포구 성산동",at:"오피스텔",tags:["pf","abs"],
+ ev:[["20.01","본PF 350억","f"],["20.03","착공 및 분양"],["21.10","시행이익 유동화","f"],["22.04","준공 및 사용승인"],["22.11","공사비 정산"]],
+ sl:"분양매출",sv:640,gfa:"2,636평",spec:"지하1~지상15층, 오피스텔 196실 및 근린생활시설",bd:"㈜군장종합건설",dev:"㈜뉴씨티산업개발"},
+{no:15,nm:"대구 침산동 주상복합 개발사업",loc:"대구 북구 침산동",at:"주상복합",tags:["early","pf"],
+ ev:[["19.06","브릿지론 300억","f"],["19.09","사업계획승인 완료"],["19.12","본PF 800억","f"],["20.10","착공 및 분양"]],
+ sl:"분양매출",sv:2292,gfa:"22,292평",spec:"지하3~지상48층, 공동주택 300세대",bd:"㈜포스코건설",dev:"모아하우징㈜"},
+{no:16,nm:"부천 중동1-1구역 주택재개발",loc:"경기 부천시 원미구 중동",at:"공동주택",tags:["pf","reno"],
+ ev:[["09.07","조합설립인가"],["15.02","사업시행인가 (변경)"],["15.12","관리처분계획인가"],["16.03","본PF 370억","f"],["17.04","착공 및 분양"]],
+ sl:"분양매출",sv:1081,gfa:"15,265평",spec:"지하2~지상30층, 공동주택 339세대",bd:"㈜효성",dev:"중동1-1구역 주택재개발정비사업조합"},
+{no:17,nm:"서울 대림역 상업시설 개발사업",loc:"서울 영등포구 대림동",at:"상업·복합",tags:["pf"],
+ ev:[["18.01","토지매매 계약"],["18.04","건축허가 완료"],["18.06","지하철 연결 협의 완료"],["19.02","본PF 880억","f"],["19.04","착공 및 분양"]],
+ sl:"분양매출",sv:1493,gfa:"4,860평",spec:"지하4~지상7층, 상업시설 140실",bd:"㈜오렌지이앤씨",dev:"케이차이나월드㈜"},
+{no:18,nm:"제주 세인트포CC 담보대출",loc:"제주시 구좌읍 김녕리",at:"토지·실물",tags:["loan"],
+ ev:[["16.03","사업체 인수"],["17.11","17차 개발계획 변경"],["17.12","리파이낸싱 1,100억","f"],["18.09","JJ.Park 건축허가"]],
+ sl:"감정평가액",sv:2847,gfa:"시설용지 707,938평",spec:"36홀 골프장 및 관광단지, 골프텔 20실",bd:"차주 ㈜제이제이한라",bdn:"㈜한라홀딩스 지분 100%",dev:"㈜제이제이한라"},
+{no:19,nm:"평택 고덕 오피스텔 개발사업",loc:"경기 평택시 장당동",at:"오피스텔",tags:["pf"],
+ ev:[["18.01","토지매매 계약"],["18.04","건축허가 완료"],["18.06","본PF 3,400억","f"],["18.06","착공 및 분양"]],
+ sl:"분양매출",sv:6156,gfa:"46,288평",spec:"지하7~지상27층, 오피스텔 1,200실 및 상업시설",bd:"HDC현대산업개발㈜",dev:"㈜베스트원"},
+{no:20,nm:"포천 태봉공원 공동주택 특례사업",loc:"경기 포천시 소흘읍 송우리",at:"공동주택",tags:["early","pf"],
+ ev:[["20.04","실시계획인가 고시"],["20.05","Equity 공동투자","f"],["20.09","본PF 490억","f"],["21.01","사업계획승인 완료"],["21.09","착공 및 분양"]],
+ sl:"분양매출",sv:2500,gfa:"30,240평",spec:"지하1~지상22층, 공동주택 628세대 및 근린생활시설",bd:"㈜대우건설",dev:"㈜보담피앤피"},
+{no:21,nm:"서울 가산동 지식산업센터 개발사업",loc:"서울 금천구 가산동",at:"지식산업센터",tags:["pf"],
+ ev:[["18.12","토지매매 계약"],["19.05","건축심의 완료"],["19.09","건축허가 완료"],["19.10","본PF 1,000억","f"],["19.11","착공 및 분양"]],
+ sl:"분양매출",sv:2423,gfa:"22,634평",spec:"지하3~지상19층, 지식산업센터 362실 및 근린생활시설",bd:"㈜한라",dev:"케이원디㈜"},
+{no:22,nm:"인천 송도 PKG6-2 토지 담보대출",loc:"인천 송도국제도시 국제업무단지",at:"토지·실물",tags:["loan"],
+ ev:[["19.07","주관사 선정"],["19.08","담보 감정평가"],["19.10","담보대출 약정 체결"],["19.10","리파이낸싱 2,000억","f"]],
+ sl:"감정평가액",sv:3840,gfa:"토지 58,056평",spec:"송도국제도시 NSIC Package#6-2 (B6-2 외 13개 블록) 부지",bd:"차주 NSIC",bdn:"Gale 70.1% · 포스코건설 29.9%",dev:"NSIC"},
+{no:23,nm:"필리핀 클락 공동주택 개발사업",loc:"필리핀 Clark Freeport Zone",at:"공동주택",tags:["pf","post"],
+ ev:[["17.08","도급계약 체결"],["17.09","토지임차권 변경계약"],["17.11","본PF 400억 및 착공","f"],["19.05","리파이낸싱 600억","f"]],
+ sl:"분양매출",sv:1376,gfa:"23,074평",spec:"지하1~지상21층, 공동주택 552세대",bd:"㈜포스코건설",dev:"JB ClarkHills (㈜포스코건설 지분 70%)"},
+{no:24,nm:"세종 어반아트리움 P5 복합시설 개발사업",loc:"세종 2-4생활권 P5블록",at:"상업·복합",tags:["pf","post"],
+ ev:[["15.11","공모사업 당선"],["17.04","건축허가 완료"],["17.05","본PF 750억","f"],["17.06","착공 및 분양"],["19.05","리파이낸싱 380억","f"]],
+ sl:"분양매출",sv:1332,gfa:"9,686평",spec:"지하2~지상12층, 오피스텔 · 근린생활시설 · 문화집회시설",bd:"대양종합건설㈜",dev:"㈜유에이오"},
+{no:25,nm:"원주 관설동 공동주택 개발사업",loc:"강원 원주시 관설동",at:"공동주택",tags:["early","pf"],
+ ev:[["21.03","계약금 기표"],["21.10","브릿지론 420억","f"],["22.03","본PF 1,150억","f"],["22.05","사업계획승인 완료"],["22.08","착공 및 분양"]],
+ sl:"분양매출",sv:5108,gfa:"54,188평",spec:"지하2~지상18층, 공동주택 975세대",bd:"현대건설㈜",dev:"㈜에이치디지"},
+{no:26,nm:"대구 달성공원역 주상복합 개발사업",loc:"대구 중구 태평로3가",at:"주상복합",tags:["pf"],
+ ev:[["19.10","계약금 기표"],["20.05","건축심의 완료"],["20.07","본PF 700억","f"],["20.09","사업계획승인 완료"],["20.11","착공 및 분양"]],
+ sl:"분양매출",sv:2130,gfa:"21,229평",spec:"지하5~지상48층, 공동주택 322세대 · 오피스텔 72실",bd:"현대건설㈜",dev:"㈜모아이엔씨"},
+{no:27,nm:"삼성중공업 판교센터 담보대출",loc:"경기 성남시 분당구 삼평동",at:"토지·실물",tags:["loan"],
+ ev:[["14.10","준공 및 사용승인"],["17.09","담보대출 600억","f"],["19.12","2차 담보 감정평가"],["20.01","리파이낸싱 1,400억","f"]],
+ sl:"감정평가액",sv:1618,gfa:"토지 2,256평 · 건물 17,449평",spec:"판교 R&D 센터",bd:"차주 삼성중공업㈜",dev:"삼성중공업㈜"},
+{no:28,nm:"안양 힐스테이트 펠루스 주상복합 개발사업",loc:"경기 안양시 만안구 안양동",at:"주상복합",tags:["pf","abs"],
+ ev:[["19.12","건축허가 완료"],["20.06","본PF 720억","f"],["22.05","층수 상향 (20층)"],["24.01","Tr.B 100억 추가","f"],["24.07","유동화증권 720억","f"]],
+ sl:"분양매출",sv:1426,gfa:"9,472평",spec:"지하6~지상20층, 공동주택 55세대 · 오피스텔 143실",bd:"현대건설㈜",dev:"㈜아발론"},
+{no:29,nm:"힐스테이트 신용 더 리버 미분양 담보대출",loc:"광주 북구 신용동",at:"공동주택",tags:["post"],
+ ev:[["18.06","사업계획승인"],["21.02","착공"],["24.04","준공"],["24.07","미분양 담보대출 640억","f"],["25.07","리파이낸싱 525억","f"]],
+ sl:"분양매출",sv:5727,gfa:"82,530평",spec:"지하2~지상29층, 공동주택 1,647세대",bd:"현대건설㈜",dev:"신용동현대지역주택조합"},
+{no:30,nm:"서울 대조1구역 주택재개발정비사업",loc:"서울 은평구 대조동",at:"공동주택",tags:["reno"],
+ ev:[["17.01","사업시행인가"],["19.05","관리처분인가"],["22.10","착공"],["24.08","사업비대출 3,340억","f"],["25.05","분양 개시"]],
+ sl:"분양매출",sv:15001,gfa:"109,853평",spec:"지하5~지상25층, 공동주택 2,451세대",bd:"현대건설㈜",dev:"대조제1구역 주택재개발정비사업조합"},
+{no:31,nm:"위례 복정역세권 복합개발사업",loc:"서울 송파구 장지동 · 성남시 수정구 창곡동",at:"상업·복합",tags:["pf"],
+ ev:[["23.11","우선협상자 선정"],["24.01","PFV 설립"],["24.08","중반채 1조 5,297억","f"],["26.03","1BL 건축허가"],["26.09","1BL 본PF 3,800억","f"]],
+ sl:"분양매출",sv:130823,gfa:"504,432평",spec:"업무 · 지식산업센터 · 오피스텔 1,557실 · 호텔",bd:"현대건설 · HDC현대산업개발 · 한림건설",dev:"송파비즈클러스터PFV㈜"},
+{no:32,nm:"서울 을지로 트윈타워 리츠주식 담보대출",loc:"서울 중구 을지로4가",at:"오피스·업무",tags:["loan"],
+ ev:[["15.04","사업시행인가"],["16.03","착공"],["19.05","준공"],["24.11","주식담보대출 185억","f"]],
+ sl:"담보가치",sv:553,gfa:"@3,700만원/평 기준",spec:"지하8~지상20층, 업무시설 2개동 · 담보: 케이리얼티제10호리츠 주식",bd:"차주 로스타㈜",dev:"로스타㈜"},
+{no:33,nm:"평택 가재지구 공동주택 시행이익 유동화",loc:"경기 평택시 가재동",at:"공동주택",tags:["abs"],
+ ev:[["22.07","건축심의 완료"],["23.04","착공"],["23.05","본PF 2,200억"],["23.06","분양 개시"],["24.12","시행이익 유동화 190억","f"]],
+ sl:"분양매출",sv:5875,gfa:"60,280평",spec:"지하2~지상29층, 공동주택 1,152세대",bd:"제일건설㈜",dev:"㈜씨지주택"},
+{no:34,nm:"대구 신천동 주상복합 리파이낸싱",loc:"대구 동구 신천동",at:"주상복합",tags:["post"],
+ ev:[["21.05","본PF 1,400억"],["22.08","착공"],["22.12","분양 개시"],["25.05","리파이낸싱 800억","f"],["26.04","준공"]],
+ sl:"분양매출",sv:3499,gfa:"30,599평",spec:"지하6~지상35층, 공동주택 481세대 · 오피스텔 62실",bd:"현대건설㈜",dev:"모아에이엔씨㈜"},
+{no:35,nm:"서울 교대역 오피스 PF 리파이낸싱",loc:"서울 서초구 서초동",at:"오피스·업무",tags:["pf","post"],
+ ev:[["22.05","건축허가 완료"],["23.09","본PF 2,800억","f"],["23.10","착공"],["25.08","건축허가 변경"],["25.09","리파이낸싱 3,100억","f"]],
+ sl:"준공후가치",sv:5200,gfa:"11,189평",spec:"지하9~지상20층, 업무시설 및 근린생활시설",bd:"웅진건설㈜",bdn:"책임준공확약 현대건설㈜",dev:"㈜제이케이파트너스"},
+{no:36,nm:"서대구역 센트럴 주상복합 미분양 담보대출",loc:"대구 서구 비산동",at:"주상복합",tags:["post"],
+ ev:[["21.07","사업계획승인"],["22.07","착공"],["25.04","준공"],["25.09","미분양 담보대출 2,786억 (HUG 모기지 1,670억 포함)","f"]],
+ sl:"분양매출",sv:4870,gfa:"45,185평",spec:"공동주택 762세대 · 오피스텔 75실 및 근린생활시설",bd:"현대건설㈜",dev:"㈜비에스디파트너스"},
+{no:37,nm:"순천 왕지 조례지구 공동주택 개발사업",loc:"전남 순천시 조례동",at:"공동주택",tags:["pf"],
+ ev:[["21.07","실시계획인가 고시"],["25.09","지구단위계획 변경"],["25.12","본PF 1,750억","f"],["26.12","사업계획승인","p"],["27.01","착공 및 분양","p"]],
+ sl:"분양매출",sv:6835,gfa:"57,669평",spec:"지하5~지상29층, 공동주택 999세대",bd:"두산에너빌리티㈜",dev:"㈜지엠도시개발 · ㈜아이피시티",tr:"하나자산신탁㈜ (하이브리드 차입형)",badge:"차입형(하나자산신탁)"},
+{no:38,nm:"서울 양동 11·12지구 오피스 개발사업",loc:"서울 중구 남대문로5가",at:"오피스·업무",tags:["pf","reno"],
+ ev:[["22.07","정비계획 변경고시"],["25.06","사업시행변경인가"],["25.10","관리처분인가"],["26.05","본PF 5,000억","f"]],
+ sl:"준공후가치",sv:7400,gfa:"15,708평",spec:"지하10~지상32층, 업무시설 및 근린생활시설",bd:"㈜KCC건설",dev:"㈜세민개발"},
+{no:39,nm:"서울 한남2구역 추가사업비 대출",loc:"서울 용산구 보광동",at:"공동주택",tags:["reno"],
+ ev:[["21.11","사업시행인가"],["25.07","관리처분인가"],["26.01","HUG 사업비 8,025억"],["26.01","추가사업비 5,820억","f"],["27.06","착공 및 분양","p"]],
+ sl:"분양매출",sv:16242,gfa:"102,710평",spec:"지하6~지상14층, 공동주택 1,537세대",bd:"㈜대우건설",bdn:"연대보증",dev:"한남2구역 주택재개발정비사업조합"},
+{no:40,nm:"부산 명장공원 공동주택 개발사업",loc:"부산 해운대구 반여동",at:"공동주택",tags:["pf"],
+ ev:[["19.12","특례사업 협약 체결"],["22.06","실시계획인가 고시"],["22.11","사업계획승인"],["26.05","본PF 2,700억","f"],["26.10","착공 및 분양","p"]],
+ sl:"분양매출",sv:12966,gfa:"95,084평",spec:"지하6~지상29층, 공동주택 1,644세대",bd:"두산에너빌리티㈜",dev:"㈜정상시티파크",tr:"하나자산신탁㈜ (하이브리드 차입형)",badge:"차입형(하나자산신탁)"}
+];
+
+const TYPES=[
+ {k:"early",lb:"사업 초기",bl:"초기 투자 · 브릿지",t:"사업 초기 · 토지 확보",d:"토지 계약금 · 인허가 단계의 브릿지론과 시행사 Equity 공동투자",ex:[[3,"의정부 금오동 브릿지론","770억"],[25,"원주 관설동 브릿지론","420억"],[15,"대구 침산동 브릿지론","300억"]]},
+ {k:"pf",lb:"본PF",bl:"본PF",t:"개발사업 본PF",d:"공동주택 · 주상복합부터 오피스 · 지식산업센터 · 생활숙박시설까지",ex:[[38,"양동 11·12지구 오피스","5,000억"],[31,"위례 복정역세권 1BL","3,800억"],[19,"평택 고덕 오피스텔","3,400억"]]},
+ {k:"reno",lb:"정비사업",bl:"정비사업",t:"정비사업 금융",d:"재개발 사업비 · 추가사업비 대출, 도시정비형 재개발 본PF",ex:[[39,"한남2구역 추가사업비","5,820억"],[30,"대조1구역 사업비","3,340억"],[16,"부천 중동1-1구역 본PF","370억"]]},
+ {k:"post",lb:"리파이낸싱 · 미담",bl:"리파이낸싱 · 미담",t:"리파이낸싱 · 미분양 담보대출",d:"PF 만기 대응 리파이낸싱과 준공 후 미분양 담보대출 (HUG 모기지 연계 포함)",ex:[[35,"교대역 오피스 리파이낸싱","3,100억"],[36,"서대구역 센트럴 미담","2,786억"],[29,"신용 더 리버 미담","640억"]]},
+ {k:"loan",lb:"담보대출",bl:"토지 · 실물 담보",t:"토지 · 실물 · 주식 담보대출",d:"개발부지, 업무시설, 골프장, 리츠 주식을 담보로 한 대출과 리파이낸싱",ex:[[7,"송도 PKG5 토지","5,530억"],[22,"송도 PKG6-2 토지","2,000억"],[27,"삼성중공업 판교센터","1,400억"]]},
+ {k:"abs",lb:"유동화",bl:"유동화",t:"유동화",d:"시행이익 유동화와 PF 대출 유동화증권 발행",ex:[[28,"안양 힐스테이트 펠루스","720억"],[1,"고양 삼송 시행이익","400억"],[33,"평택 가재지구 시행이익","190억"]]}
+];
+const ASSETS=["공동주택","주상복합","오피스텔","단독·연립","오피스·업무","지식산업센터","상업·복합","토지·실물"];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ym=s=>{const [y,m]=s.split(".");return (+y)*100+(+m)};
+const fmtE=v=>v>=10000?`${Math.floor(v/10000)}조${v%10000?" "+(v%10000).toLocaleString("en-US"):""}억`:`${v.toLocaleString("en-US")}억`;
+DEALS.forEach((d,i)=>{
+  d.dn=i+1; const f=d.ev.filter(e=>e[2]==="f");
+  d.fins=f; d.last=f.length?Math.max(...f.map(e=>ym(e[0]))):0;
+  d.per=d.no>=28?"new":"old";
+  d.hay=[d.nm,d.loc,d.at,d.bd,d.bdn||"",d.dev,d.tr||""].join(" ").toLowerCase();
+});
+
+/* 요약 패널 */
+document.querySelectorAll(".n-deal").forEach(e=>e.textContent=DEALS.length);
+(function kpis(){
+  const n=DEALS.length;
+  const yrs={}; for(let y=16;y<=26;y++) yrs[y]=0;
+  DEALS.forEach(d=>d.fins.forEach(e=>{const y=+e[0].split(".")[0]; if(y in yrs) yrs[y]++;}));
+  const ys=Object.keys(yrs).map(Number), mx=Math.max(...Object.values(yrs));
+  const W=300,H=96,pad=14,bw=(W-8)/ys.length;
+  let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="연도별 금융 실행 건수">`;
+  svg+=`<line class="grid" x1="0" x2="${W}" y1="${H-pad}" y2="${H-pad}"/>`;
+  ys.forEach((y,i)=>{const v=yrs[y],h=v?Math.max(3,(H-pad-16)*v/mx):0,x=4+i*bw+bw*.18,w=bw*.64;
+    svg+=`<rect x="${x.toFixed(1)}" y="${(H-pad-h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${y>=23?"var(--seg1)":"var(--seg3)"}"/>`;
+    if(v) svg+=`<text class="v" x="${(x+w/2).toFixed(1)}" y="${(H-pad-h-3).toFixed(1)}" text-anchor="middle">${v}</text>`;
+    svg+=`<text x="${(x+w/2).toFixed(1)}" y="${H-2}" text-anchor="middle">'${y}</text>`;});
+  svg+=`</svg>`;
+  const tc=TYPES.map(t=>({...t,c:DEALS.filter(d=>d.tags.includes(t.k)).length}));
+  const tmax=Math.max(...tc.map(t=>t.c));
+  const bm={}; const norm=s=>s.replace(/㈜|\(.*?\)|차주 /g,"").replace("포스코건설","포스코이앤씨").trim();
+  DEALS.forEach(d=>{ if(d.bd.startsWith("차주")||d.bd.includes("미정")) return; d.bd.split(" · ").forEach(b=>{const k=norm(b); bm[k]=(bm[k]||0)+1;});});
+  const bl=Object.entries(bm).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"ko"));
+  const top=bl.slice(0,6), rest=bl.slice(6).reduce((s,x)=>s+x[1],0), bmax=top[0][1];
+  $("#kpis").innerHTML=`
+   <div class="kpi"><div class="name"><b>수행 딜</b><span>연도별 금융 실행 건수</span></div>
+     <div class="big"><span class="num">${n}<small>건</small></span><span class="cap">'23–'26 ${DEALS.filter(d=>d.per==="new").length}건 · '16–'22 ${DEALS.filter(d=>d.per==="old").length}건</span></div>
+     <div class="yrs">${svg}</div>
+     <div class="region">서울 · 경기 · 인천 · 대구 · 부산 · 광주 · 강원 · 전남 · 세종 · 제주 · 필리핀</div></div>
+   <div class="kpi"><div class="name"><b>금융 구조</b><span>딜 수 · 중복 포함</span></div>
+     <div class="bars">${tc.map(t=>`<span class="lb">${t.bl}</span><span class="tr"><i style="width:${(t.c/tmax*100).toFixed(0)}%"></i></span><span class="n"><b>${t.c}</b>건</span>`).join("")}</div></div>
+   <div class="kpi"><div class="name"><b>함께한 시공사</b><span>개발 · 정비사업 기준 딜 수</span></div>
+     <div class="bars">${top.map(([k,v])=>`<span class="lb">${esc(k)}</span><span class="tr"><i style="width:${(v/bmax*100).toFixed(0)}%;background:var(--seg2)"></i></span><span class="n"><b>${v}</b>건</span>`).join("")}<span class="lb" style="color:var(--muted)">기타 ${bl.length-6}개사</span><span></span><span class="n"><b>${rest}</b>건</span></div>
+     <div class="kfoot">시공사별 시공능력평가 · 신용등급은 <a href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 대시보드</a>에서 볼 수 있습니다.</div></div>`;
+})();
+
+/* 상태 */
+const st={type:"all",per:"all",asset:"all",q:"",sort:"last",dir:-1};
+
+/* 타일 */
+$("#tiles").innerHTML=TYPES.map(t=>{const c=DEALS.filter(d=>d.tags.includes(t.k)).length;
+  return `<button type="button" class="tile" data-v="${t.k}" aria-pressed="false"><div class="th"><b>${t.t}</b><span><em>${c}</em>건</span></div><p>${t.d}</p><ul>${t.ex.map(e=>`<li><span>${esc(e[1])}</span><i>${e[2]}</i></li>`).join("")}</ul></button>`}).join("");
+$("#seg-type").innerHTML=`<button type="button" data-v="all" aria-pressed="true">전체</button>`+TYPES.map(t=>`<button type="button" data-v="${t.k}" aria-pressed="false">${t.lb}</button>`).join("");
+const used=new Set(DEALS.map(d=>d.at));
+$("#f-asset").insertAdjacentHTML("beforeend",ASSETS.filter(a=>used.has(a)).map(a=>`<option value="${a}">${a} (${DEALS.filter(d=>d.at===a).length})</option>`).join(""));
+
+function setType(v){st.type=v;
+  document.querySelectorAll("#seg-type button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===v));
+  document.querySelectorAll(".tile").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===v));
+  render();}
+document.querySelector("#seg-type").addEventListener("click",e=>{const b=e.target.closest("button"); if(b) setType(b.dataset.v);});
+document.querySelector("#tiles").addEventListener("click",e=>{const b=e.target.closest(".tile"); if(!b) return;
+  setType(st.type===b.dataset.v?"all":b.dataset.v);
+  const r=$("#track").getBoundingClientRect(); if(r.top>window.innerHeight*.6||r.top<0) $("#track").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});});
+document.querySelector("#seg-per").addEventListener("click",e=>{const b=e.target.closest("button"); if(!b) return; st.per=b.dataset.v;
+  document.querySelectorAll("#seg-per button").forEach(x=>x.setAttribute("aria-pressed",x===b)); render();});
+$("#f-asset").addEventListener("change",e=>{st.asset=e.target.value; render();});
+$("#f-q").addEventListener("input",e=>{st.q=e.target.value.trim().toLowerCase(); render();});
+document.querySelector("#cols").addEventListener("click",e=>{const h=e.target.closest("[data-k]"); if(!h||!e.target.closest("button")) return;
+  const k=h.dataset.k; if(st.sort===k) st.dir*=-1; else {st.sort=k; st.dir=k==="no"?1:-1;}
+  document.querySelectorAll("#cols [data-k]").forEach(x=>x.setAttribute("aria-sort",x.dataset.k===st.sort?(st.dir>0?"ascending":"descending"):"none"));
+  render();});
+
+const chev=`<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>`;
+const finChip=e=>{const m=e[1].match(/^(.*?)\s*([\d,]+억|1조 [\d,]+억)(.*)$/);
+  return `<span class="fin"><i>'${e[0]}</i>${m?`${esc(m[1])} <b>${m[2]}</b>`:esc(e[1])}</span>`};
+function row(d){
+  const img=`img/d${String(d.no).padStart(2,"0")}.jpg`;
+  return `<details class="deal" role="row"><summary>
+    <span class="no">${d.dn}</span>
+    <img class="thumb" src="${img}" alt="" loading="lazy" width="112" height="70">
+    <span class="nm"><b>${esc(d.nm)}</b><small><span class="at">${d.at}</span>${d.badge?`<span class="at">${esc(d.badge)}</span>`:""}<span>${esc(d.loc)}</span></small></span>
+    <span class="fins">${d.fins.map(finChip).join("")}</span>
+    <span class="sc"><b>${fmtE(d.sv)}</b><small>${d.sl}</small></span>
+    <span class="bd">${esc(d.bd)}${d.bdn?`<small>${esc(d.bdn)}</small>`:""}</span>
+    ${chev}</summary>
+    <div class="detail">
+      <div class="dimg"><img src="${img}" alt="${esc(d.nm)} 조감도" loading="lazy"></div>
+      <div><h3>사업 · 금융 일정</h3><ol class="tl">${d.ev.map(e=>`<li class="${e[2]||""}"><time>'${e[0]}</time><span>${esc(e[1])}${e[2]==="p"?`<span class="tag">예정</span>`:""}</span></li>`).join("")}</ol></div>
+      <div><h3>사업 규모</h3><dl class="spec">
+        <dt>위치</dt><dd>${esc(d.loc)}</dd>
+        <dt>${d.sl}</dt><dd class="m">${fmtE(d.sv)}</dd>
+        <dt>${/^(토지|시설|@)/.test(d.gfa)?"규모":"연면적"}</dt><dd class="m">${esc(d.gfa)}</dd>
+        <dt>시설</dt><dd>${esc(d.spec)}</dd>
+        ${d.bd.startsWith("차주")?`<dt>차주</dt><dd>${esc(d.dev)}${d.bdn?` (${esc(d.bdn)})`:""}</dd>`:`<dt>시공사</dt><dd>${esc(d.bd)}${d.bdn?` (${esc(d.bdn)})`:""}</dd><dt>시행사</dt><dd>${esc(d.dev)}</dd>`}
+        ${d.tr?`<dt>신탁사</dt><dd>${esc(d.tr)}</dd>`:""}
+      </dl></div>
+    </div></details>`;
+}
+function render(){
+  let L=DEALS.filter(d=>(st.type==="all"||d.tags.includes(st.type))&&(st.per==="all"||d.per===st.per)&&(st.asset==="all"||d.at===st.asset)&&(!st.q||d.hay.includes(st.q)));
+  const key={no:d=>d.no,last:d=>d.last*100+d.no/100,scale:d=>d.sv}[st.sort];
+  L.sort((a,b)=>(key(a)-key(b))*st.dir);
+  $("#rows").innerHTML=L.length?L.map(row).join(""):`<div class="empty">조건에 맞는 딜이 없습니다. 필터를 바꾸거나 검색어를 지워 보세요.</div>`;
+  $("#count").innerHTML=`<b>${L.length}</b> / ${DEALS.length}건`;
+}
+render();
+
+/* 복사 */
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+  const el=document.getElementById(b.dataset.copy), t=el.textContent;
+  const done=()=>{b.textContent="복사됨"; setTimeout(()=>b.textContent="복사",1600);};
+  const sel=()=>{const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent="선택됨"; setTimeout(()=>b.textContent="복사",1600);};
+  try{navigator.clipboard.writeText(t).then(done,sel);}catch(e){sel();}
+}));
+</script>
+
+</body>
+</html>
