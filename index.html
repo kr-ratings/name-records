@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: 단일 컬럼 — 프로필(명함 + 소개) → 요약 3칸 패널 → 금융 구조별 타일 → 필터 바 + 수행 딜 목록(펼치면 일정·규모)
+/* Layout: 단일 컬럼 — 프로필(명함 + 소개) → 요약 3칸 패널 → 금융 구조별 타일 → 필터 바 + 주요 딜 목록(사업장 기준, 펼치면 일정·규모)
    토큰은 '유동화시장 등급 · 금리 현황'(daily-ratings) · '시공사 시공능력평가 · 신용등급 현황'(cons-ratings) 대시보드와 동일 */
 :root{
   --bg:#f5f6f8; --surface:#ffffff; --line:#dfe2e8; --fg:#1b2230; --muted:#5d6678;
@@ -242,7 +242,7 @@ footer a:hover{text-decoration:underline}
         <a class="sister" href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 시공사 시공능력평가 · 신용등급</a>
         <a class="sister" href="https://apt-watch.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 분양시장 청약 · 미분양 현황</a>
       </div>
-      <div class="updated">2026.10 기준 · 주요 수행딜 <span class="n-deal">39</span>건</div>
+      <div class="updated">2026.10 기준 · 금융 수행 <span class="n-fin">52</span>건</div>
     </div>
   </header>
 
@@ -259,7 +259,7 @@ footer a:hover{text-decoration:underline}
           <span class="role">금융 주선</span><span class="role">대주 참여</span><span class="role">Equity 공동투자</span>
           <span class="role">개발사업 PF</span><span class="role alt">정비사업</span><span class="role alt">담보대출</span><span class="role alt">유동화 · 리파이낸싱</span>
         </div>
-        <p>부동산 개발사업의 토지 확보부터 착공, 분양, 준공 이후까지 단계마다 필요한 금융을 구조화하고, 주관사 또는 대주로 참여해 왔습니다. 공동주택 · 주상복합 · 오피스 개발 PF와 재개발 사업비, 미분양 · 실물 · 담보대출, 시행이익 유동화와 리파이낸싱까지 2018년 이후 <span class="n-deal">39</span>개 사업의 금융을 수행했습니다.</p>
+        <p>부동산 개발사업의 토지 확보부터 착공, 분양, 준공 이후까지 단계마다 필요한 금융을 구조화하고, 주관사 또는 대주로 참여해 왔습니다. 공동주택 · 주상복합 · 오피스 개발 PF와 재개발 사업비, 미분양 · 실물 · 담보대출, 시행이익 유동화와 리파이낸싱까지 2018년 이후 <span class="n-fin">52</span>건의 금융을 수행했습니다.</p>
         <p>금융주관사 · 시행사 · 시공사 · 신탁사와 사업 초기부터 구조를 함께 작업하는 일이 많습니다. 사업 개요서나 초기 단계의 자료로도 조달 구조와 당사 대주 참여 일정을 검토할 수 있습니다.</p>
         <dl class="contact">
           <dt>이메일</dt><dd><span class="v" id="c-mail">name@koreainvestment.com</span><button type="button" class="copy" data-copy="c-mail">복사</button></dd>
@@ -273,7 +273,7 @@ footer a:hover{text-decoration:underline}
   <section aria-labelledby="h-sum">
     <div class="sec-head">
       <h2 id="h-sum">요약</h2>
-      <span class="note">2018–2026 수행 딜 기준 · 금액 단위 억원</span>
+      <span class="note">2018–2026 기준 · 금액 단위 억원</span>
     </div>
     <div class="kpis" id="kpis"></div>
   </section>
@@ -288,7 +288,7 @@ footer a:hover{text-decoration:underline}
 
   <section aria-labelledby="h-list" id="track">
     <div class="sec-head">
-      <h2 id="h-list">수행 딜 목록</h2>
+      <h2 id="h-list">주요 딜 목록(사업장 기준)</h2>
       <span class="note">행을 누르면 사업 · 금융 일정과 사업 규모가 펼쳐집니다</span>
     </div>
     <div class="filters">
@@ -304,7 +304,7 @@ footer a:hover{text-decoration:underline}
       <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="사업명 · 지역 · 시공사 검색"></label>
       <div class="tail"><span class="count" id="count"></span></div>
     </div>
-    <div class="list" role="table" aria-label="수행 딜 목록">
+    <div class="list" role="table" aria-label="주요 딜 목록(사업장 기준)">
       <div class="cols" role="row" id="cols">
         <span class="r" role="columnheader" data-k="no" aria-sort="none"><button type="button">No</button></span>
         <span role="columnheader">조감도</span>
@@ -403,11 +403,11 @@ const DEALS=[
 {no:23,nm:"필리핀 클락 공동주택 개발사업",loc:"필리핀 Clark Freeport Zone",at:"공동주택",tags:["pf","post"],
  ev:[["17.08","도급계약 체결"],["17.09","토지임차권 변경계약"],["17.11","본PF 400억 및 착공","f"],["19.05","리파이낸싱 600억","f"]],
  sl:"분양매출",sv:1376,gfa:"23,074평",spec:"지하1~지상21층, 공동주택 552세대",bd:"㈜포스코건설",dev:"JB ClarkHills (㈜포스코건설 지분 70%)"},
-{no:24,nm:"세종 어반아트리움 P5 복합시설 개발사업",loc:"세종 2-4생활권 P5블록",at:"상업·복합",tags:["pf","post"],
- ev:[["15.11","공모사업 당선"],["17.04","건축허가 완료"],["17.05","본PF 750억","f"],["17.06","착공 및 분양"],["19.05","리파이낸싱 380억","f"]],
+{no:24,nm:"세종 어반아트리움 P5 복합시설 개발사업",loc:"세종 2-4생활권 P5블록",at:"상업·복합",tags:["post"],
+ ev:[["15.11","공모사업 당선"],["17.04","건축허가 완료"],["17.05","본PF 750억"],["17.06","착공 및 분양"],["19.05","리파이낸싱 380억","f"]],
  sl:"분양매출",sv:1332,gfa:"9,686평",spec:"지하2~지상12층, 오피스텔 · 근린생활시설 · 문화집회시설",bd:"대양종합건설㈜",dev:"㈜유에이오"},
 {no:25,nm:"원주 관설동 공동주택 개발사업",loc:"강원 원주시 관설동",at:"공동주택",tags:["early","pf"],
- ev:[["21.03","계약금 기표"],["21.10","브릿지론 420억","f"],["22.03","본PF 1,150억","f"],["22.05","사업계획승인 완료"],["22.08","착공 및 분양"]],
+ ev:[["21.03","계약금 대출 30억","f"],["21.10","브릿지론 420억","f"],["22.03","본PF 1,150억","f"],["22.05","사업계획승인 완료"],["22.08","착공 및 분양"]],
  sl:"분양매출",sv:5108,gfa:"54,188평",spec:"지하2~지상18층, 공동주택 975세대",bd:"현대건설㈜",dev:"㈜에이치디지"},
 {no:26,nm:"대구 달성공원역 주상복합 개발사업",loc:"대구 중구 태평로3가",at:"주상복합",tags:["pf"],
  ev:[["19.10","계약금 기표"],["20.05","건축심의 완료"],["20.07","본PF 700억","f"],["20.09","사업계획승인 완료"],["20.11","착공 및 분양"]],
@@ -415,8 +415,8 @@ const DEALS=[
 {no:27,nm:"삼성중공업 판교센터 담보대출",loc:"경기 성남시 분당구 삼평동",at:"토지·실물",tags:["loan"],
  ev:[["14.10","준공 및 사용승인"],["17.09","담보대출 600억","f"],["19.12","2차 담보 감정평가"],["20.01","리파이낸싱 1,400억","f"]],
  sl:"감정평가액",sv:1618,gfa:"토지 2,256평 · 건물 17,449평",spec:"판교 R&D 센터",bd:"차주 삼성중공업㈜",dev:"삼성중공업㈜"},
-{no:28,nm:"안양 힐스테이트 펠루스 주상복합 개발사업",loc:"경기 안양시 만안구 안양동",at:"주상복합",tags:["pf","abs"],
- ev:[["19.12","건축허가 완료"],["20.06","본PF 720억","f"],["22.05","층수 상향 (20층)"],["24.01","Tr.B 100억 추가","f"],["24.07","유동화증권 720억","f"]],
+{no:28,nm:"안양 힐스테이트 펠루스 주상복합 개발사업",loc:"경기 안양시 만안구 안양동",at:"주상복합",tags:["abs"],
+ ev:[["19.12","건축허가 완료"],["20.06","본PF 720억"],["22.05","층수 상향 (20층)"],["24.01","Tr.B 100억 추가"],["24.07","유동화증권 720억","f"]],
  sl:"분양매출",sv:1426,gfa:"9,472평",spec:"지하6~지상20층, 공동주택 55세대 · 오피스텔 143실",bd:"현대건설㈜",dev:"㈜아발론"},
 {no:29,nm:"힐스테이트 신용 더 리버 미분양 담보대출",loc:"광주 북구 신용동",at:"공동주택",tags:["post"],
  ev:[["18.06","사업계획승인"],["21.02","착공"],["24.04","준공"],["24.07","미분양 담보대출 640억","f"],["25.07","리파이낸싱 525억","f"]],
@@ -433,8 +433,8 @@ const DEALS=[
 {no:33,nm:"평택 가재지구 공동주택 시행이익 유동화",loc:"경기 평택시 가재동",at:"공동주택",tags:["abs"],
  ev:[["22.07","건축심의 완료"],["23.04","착공"],["23.05","본PF 2,200억"],["23.06","분양 개시"],["24.12","시행이익 유동화 190억","f"]],
  sl:"분양매출",sv:5875,gfa:"60,280평",spec:"지하2~지상29층, 공동주택 1,152세대",bd:"제일건설㈜",dev:"㈜씨지주택"},
-{no:34,nm:"대구 신천동 주상복합 리파이낸싱",loc:"대구 동구 신천동",at:"주상복합",tags:["post"],
- ev:[["21.05","본PF 1,400억"],["22.08","착공"],["22.12","분양 개시"],["25.05","리파이낸싱 800억","f"],["26.04","준공"]],
+{no:34,nm:"대구 신천동 주상복합 리파이낸싱",loc:"대구 동구 신천동",at:"주상복합",tags:["pf","post"],
+ ev:[["21.05","본PF 1,400억","f"],["22.08","착공"],["22.12","분양 개시"],["25.05","리파이낸싱 800억","f"],["26.04","준공"]],
  sl:"분양매출",sv:3499,gfa:"30,599평",spec:"지하6~지상35층, 공동주택 481세대 · 오피스텔 62실",bd:"현대건설㈜",dev:"모아에이엔씨㈜"},
 {no:35,nm:"서울 교대역 오피스 PF 리파이낸싱",loc:"서울 서초구 서초동",at:"오피스·업무",tags:["pf","post"],
  ev:[["22.05","건축허가 완료"],["23.09","본PF 2,800억","f"],["23.10","착공"],["25.08","건축허가 변경"],["25.09","리파이낸싱 3,100억","f"]],
@@ -478,10 +478,11 @@ DEALS.forEach((d,i)=>{
 });
 
 /* 요약 패널 */
-document.querySelectorAll(".n-deal").forEach(e=>e.textContent=DEALS.length);
+const FY0=18, FINS=DEALS.flatMap(d=>d.fins).filter(e=>+e[0].split(".")[0]>=FY0);
+document.querySelectorAll(".n-fin").forEach(e=>e.textContent=FINS.length);
 (function kpis(){
-  const n=DEALS.length;
-  const yrs={}; for(let y=16;y<=26;y++) yrs[y]=0;
+  const n=FINS.length;
+  const yrs={}; for(let y=FY0;y<=26;y++) yrs[y]=0;
   DEALS.forEach(d=>d.fins.forEach(e=>{const y=+e[0].split(".")[0]; if(y in yrs) yrs[y]++;}));
   const ys=Object.keys(yrs).map(Number), mx=Math.max(...Object.values(yrs));
   const W=300,H=96,pad=14,bw=(W-8)/ys.length;
@@ -499,8 +500,8 @@ document.querySelectorAll(".n-deal").forEach(e=>e.textContent=DEALS.length);
   const bl=Object.entries(bm).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"ko"));
   const top=bl.slice(0,6), rest=bl.slice(6).reduce((s,x)=>s+x[1],0), bmax=top[0][1];
   $("#kpis").innerHTML=`
-   <div class="kpi"><div class="name"><b>수행 딜</b><span>연도별 금융 실행 건수</span></div>
-     <div class="big"><span class="num">${n}<small>건</small></span><span class="cap">'23–'26 ${DEALS.filter(d=>d.per==="new").length}건 · '16–'22 ${DEALS.filter(d=>d.per==="old").length}건</span></div>
+   <div class="kpi"><div class="name"><b>금융 수행</b><span>연도별 금융 실행 건수</span></div>
+     <div class="big"><span class="num">${n}<small>건</small></span><span class="cap">'23–'26 ${FINS.filter(e=>+e[0].split(".")[0]>=23).length}건 · '${FY0}–'22 ${FINS.filter(e=>+e[0].split(".")[0]<23).length}건</span></div>
      <div class="yrs">${svg}</div>
      <div class="region">서울 · 경기 · 인천 · 대구 · 부산 · 광주 · 강원 · 전남 · 세종 · 제주 · 필리핀</div></div>
    <div class="kpi"><div class="name"><b>금융 구조</b><span>딜 수 · 중복 포함</span></div>
