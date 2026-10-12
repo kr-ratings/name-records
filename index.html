@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>최이름 Track Records</title>
 <meta name="description" content="한국투자증권 PF1본부 부동산금융1부 최이름 차장 — 부동산 개발사업 PF · 정비사업 · 담보대출 · 유동화 금융 주관 및 대주 참여 주요 수행 실적">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="namepf.com">
+<meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://namepf.com/">
 <meta property="og:title" content="최이름 차장 · 부동산금융 주요 수행 실적">
 <meta property="og:description" content="개발사업 PF · 정비사업 · 담보대출 · 유동화 — 한국투자증권 부동산금융1부">
 <meta property="og:image" content="https://namepf.com/img/card.jpg">
-<title>최이름 Track Records</title>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="672">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://namepf.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -238,9 +244,9 @@ footer a:hover{text-decoration:underline}
     </div>
     <div class="hright">
       <div class="sisters">
-        <a class="sister" href="https://daily-ratings.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 유동화시장 등급 · 금리 현황</a>
-        <a class="sister" href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 시공사 시공능력평가 · 신용등급</a>
-        <a class="sister" href="https://apt-watch.pages.dev/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 아파트 수급 · 분양시장 현황</a>
+        <a class="sister" href="https://abs.namepf.com/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 유동화시장 등급 · 금리 현황</a>
+        <a class="sister" href="https://cons.namepf.com/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 시공사 시공능력평가 · 신용등급</a>
+        <a class="sister" href="https://apt.namepf.com/" target="_blank" rel="noopener"><span class="sl">관련 대시보드:</span> → 아파트 수급 · 분양시장 현황</a>
       </div>
       <div class="updated">2026.10 기준 · 금융 수행 <span class="n-fin">52</span>건</div>
     </div>
@@ -331,7 +337,7 @@ footer a:hover{text-decoration:underline}
   </details>
 
   <footer>
-    <p>함께 운영하는 대시보드: <a href="https://daily-ratings.pages.dev/" target="_blank" rel="noopener">유동화시장 등급 · 금리 현황</a> · <a href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황</a> · <a href="https://apt-watch.pages.dev/" target="_blank" rel="noopener">아파트 수급 · 분양시장 현황</a></p>
+    <p>함께 운영하는 대시보드: <a href="https://abs.namepf.com/" target="_blank" rel="noopener">유동화시장 등급 · 금리 현황</a> · <a href="https://cons.namepf.com/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황</a> · <a href="https://apt.namepf.com/" target="_blank" rel="noopener">아파트 수급 · 분양시장 현황</a></p>
     <p>한국투자증권 PF1본부 부동산금융1부 최이름 차장 · name@koreainvestment.com · 02-3276-6012</p>
   </footer>
 </div>
@@ -510,7 +516,7 @@ document.querySelectorAll(".n-fin").forEach(e=>e.textContent=FINS.length);
      <div class="bars">${tc.map(t=>`<span class="lb">${t.bl}</span><span class="tr"><i style="width:${(t.c/tmax*100).toFixed(0)}%"></i></span><span class="n"><b>${t.c}</b>건</span>`).join("")}</div></div>
    <div class="kpi"><div class="name"><b>함께한 시공사</b><span>개발 · 정비사업 기준 딜 수</span></div>
      <div class="bars">${top.map(([k,v])=>`<span class="lb">${esc(k)}</span><span class="tr"><i style="width:${(v/bmax*100).toFixed(0)}%;background:var(--seg2)"></i></span><span class="n"><b>${v}</b>건</span>`).join("")}<span class="lb" style="color:var(--muted)">기타 ${bl.length-6}개사</span><span></span><span class="n"><b>${rest}</b>건</span></div>
-     <div class="kfoot">시공사별 시공능력평가 · 신용등급은 <a href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 대시보드</a>에서 볼 수 있습니다.</div></div>`;
+     <div class="kfoot">시공사별 시공능력평가 · 신용등급은 <a href="https://cons.namepf.com/" target="_blank" rel="noopener">시공사 대시보드</a>에서 볼 수 있습니다.</div></div>`;
 })();
 
 /* 상태 */

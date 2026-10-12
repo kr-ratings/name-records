@@ -1,7 +1,7 @@
 # 최이름 차장 · 부동산금융 주요 수행 실적
 
 한국투자증권 PF1본부 부동산금융1부 최이름 차장의 Personal Track Records 페이지입니다.
-디자인 토큰은 [유동화시장 등급 · 금리 현황](https://daily-ratings.pages.dev/) · [시공사 시공능력평가 · 신용등급 현황](https://cons-ratings.pages.dev/) 대시보드와 같습니다.
+디자인 토큰은 [유동화시장 등급 · 금리 현황](https://abs.namepf.com/) · [시공사 시공능력평가 · 신용등급 현황](https://cons.namepf.com/) 대시보드와 같습니다.
 
 사이트: https://namepf.com (Cloudflare Pages, name-records.pages.dev도 함께 열림)
 
