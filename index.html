@@ -528,7 +528,9 @@ document.querySelectorAll(".n-fin").forEach(e=>e.textContent=FINS.length);
 })();
 
 /* 상태 */
-const st={type:"all",per:"all",asset:"all",q:"",sort:"last",dir:-1};
+const st={type:"all",per:"all",asset:"all",q:"",sort:"last",dir:-1,pin:true};
+/* 처음 화면(필터 · 검색 · 정렬을 건드리지 않은 상태)에서만 맨 위에 고정: 부산 명장 · 순천 왕지 · 양동 · 힐스테이트 신용 더 리버 */
+const PIN=[40,37,38,29];
 
 /* 타일 */
 $("#tiles").innerHTML=TYPES.map(t=>{const c=DEALS.filter(d=>d.tags.includes(t.k)).length;
@@ -550,7 +552,7 @@ document.querySelector("#seg-per").addEventListener("click",e=>{const b=e.target
 $("#f-asset").addEventListener("change",e=>{st.asset=e.target.value; render();});
 $("#f-q").addEventListener("input",e=>{st.q=e.target.value.trim().toLowerCase(); render();});
 document.querySelector("#cols").addEventListener("click",e=>{const h=e.target.closest("[data-k]"); if(!h||!e.target.closest("button")) return;
-  const k=h.dataset.k; if(st.sort===k) st.dir*=-1; else {st.sort=k; st.dir=k==="no"?1:-1;}
+  const k=h.dataset.k; st.pin=false; if(st.sort===k) st.dir*=-1; else {st.sort=k; st.dir=k==="no"?1:-1;}
   document.querySelectorAll("#cols [data-k]").forEach(x=>x.setAttribute("aria-sort",x.dataset.k===st.sort?(st.dir>0?"ascending":"descending"):"none"));
   render();});
 
@@ -584,6 +586,7 @@ function render(){
   let L=DEALS.filter(d=>(st.type==="all"||d.tags.includes(st.type))&&(st.per==="all"||d.per===st.per)&&(st.asset==="all"||d.at===st.asset)&&(!st.q||d.hay.includes(st.q)));
   const key={no:d=>d.no,last:d=>d.last*100+d.no/100,scale:d=>d.sv}[st.sort];
   L.sort((a,b)=>(key(a)-key(b))*st.dir);
+  if(st.pin&&st.type==="all"&&st.per==="all"&&st.asset==="all"&&!st.q){ const top=PIN.map(n=>L.find(d=>d.no===n)).filter(Boolean); L=[...top,...L.filter(d=>!PIN.includes(d.no))]; }
   $("#rows").innerHTML=L.length?L.map(row).join(""):`<div class="empty">조건에 맞는 딜이 없습니다. 필터를 바꾸거나 검색어를 지워 보세요.</div>`;
   $("#count").innerHTML=`<b>${L.length}</b> / ${DEALS.length}건`;
 }
