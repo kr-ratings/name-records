@@ -529,8 +529,8 @@ document.querySelectorAll(".n-fin").forEach(e=>e.textContent=FINS.length);
 
 /* 상태 */
 const st={type:"all",per:"all",asset:"all",q:"",sort:"last",dir:-1,pin:true};
-/* 처음 화면(필터 · 검색 · 정렬을 건드리지 않은 상태)에서만 맨 위에 고정: 부산 명장 · 순천 왕지 · 양동 · 힐스테이트 신용 더 리버 · 을지로 트윈타워 */
-const PIN=[40,37,38,29,32];
+/* 처음 화면(필터 · 검색 · 정렬을 건드리지 않은 상태)에서만 맨 위에 고정: 부산 명장 · 순천 왕지 · 양동 · 힐스테이트 신용 더 리버 · 을지로 트윈타워 · 평택 가재 · 고양 삼송 */
+const PIN=[40,37,38,29,32,33,1];
 
 /* 타일 */
 $("#tiles").innerHTML=TYPES.map(t=>{const c=DEALS.filter(d=>d.tags.includes(t.k)).length;
